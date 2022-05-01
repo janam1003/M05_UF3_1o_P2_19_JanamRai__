@@ -1,0 +1,21 @@
+﻿@page
+@model M05_UF3_P2_Template.Pages.Products.ProductModel
+@using M05_UF3_P2_Template.App_Code.Model;
+@{
+}
+<form method="post">
+    <button type="submit" class="btn btn-primary float-right"><span class="material-icons">save</span></button>
+    <input type="text" asp-for="product.Summary" />
+    <input type="number" step="any" asp-for="product.Price" />
+    <input type="number" step="any" asp-for="product.Size" />
+    <input type="number" asp-for="product.Developer_ID" />
+    <input type="number" asp-for="product.Editor_ID" />
+
+     <a class="btn btn-primary float-right" asp-page="/Products/Game" asp-route-id="@Model.Game_Id" title=" Edit game">
+        <span class="material-icons text-white" style="height:10px;width:10px"></span>
+    </a>
+
+      <a class="btn btn-primary float-right" asp-page="/Products/Video" asp-route-id="@Model.Video_Id" title=" Edit video">
+        <span class="material-icons text-white"  style="height:10px;width:10px"></span>
+    </a>
+</form>
